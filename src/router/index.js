@@ -5,6 +5,7 @@ import BlogList from '@/components/BlogList'
 import Blog from '@/components/Blog'
 import Blog2 from '@/components/Blog'
 import TowWayBinding from '@/components/TowWayBinding'
+import From from '@/components/From'
 
 
 
@@ -35,9 +36,14 @@ export default new Router({
       component: Blog2
     },
     {
-      path: '/',
+      path: '/sss',
       name: 'TowWayBinding',
       component: TowWayBinding
+    },
+    {
+      path: '/',
+      name: 'From',
+      component: From
     }
   ]
 })

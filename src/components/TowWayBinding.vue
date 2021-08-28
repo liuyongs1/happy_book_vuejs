@@ -1,18 +1,15 @@
 
 <template>
-
-    <input style="width:400px" />
-  <div>
-    <!-- 显示　this.my_value 这个变量 -->
+    <div>
     <p>页面上的值:  {{my_value}} </p>
-
-    <p> 通过视图层，修改my_value: </p>
-    <input v-model="my_value" style='width: 400px'/>
-
+    <p> 通过视图层，修改my_value: </p> 
+    <input v-model="my_value"  style="width:200px" />
+    <hr/> 
+    <input type='button' @click="change_my_value_by_code()"
+     value='通过控制代码修改my_value'/>
     <hr/>
-    <input type='button' @click="change_my_value_by_code()" value='通过控制代码修改my_value'/>
-    <hr/>
-    <input type='button' @click="show_my_value()" value='显示代码中的my_value'/>
+    <input type='button' @click="show_my_value()"
+     value='显示代码中的my_value'/>
   </div>
 </template>
 
@@ -20,9 +17,9 @@
 export default {
   data () {
     return {
-      my_value: '默认值',
+      my_value: '默认值'
     }
-  },
+  },  
   methods: {
     show_my_value: function(){
       alert('my_value: ' + this.my_value);

@@ -6,9 +6,27 @@
 	<div id='app'>
 		<p v-bind:style="'color:' + my_color">Vuejs 学起来好开心~ </p>
 	</div>
+	<div id='app1'>
+		<p v-bind:class="'color=' + my_color">Vuejs 学起来好开心~ </p>
+	</div>
+	<div v-bind:id='app2'>
+		<p style:"'color:' + my_color">Vuejs 学起来好开心~ </p>
+	</div>
 	<script>
 		var app = new Vue({
 			el: '#app',
+			data: {
+				my_color: 'green'
+			}
+		})
+		var app1 = new Vue({
+			el: '#app1',
+			data: {
+				my_color: 'green'
+			}
+		})
+		var app2 = new Vue({
+			el: '#app2',
 			data: {
 				my_color: 'green'
 			}
